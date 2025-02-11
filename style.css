@@ -1,0 +1,280 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid black;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+}
+
+/* Task Input Styles */
+.input-text-box{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.task-input {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#inputBox {
+    width: 89%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+select,
+input[type="date"],
+button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    width: 80px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Filter Styles */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+#searchBox {
+    width: 60%;
+}
+
+input[type="text"],
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Progress Bar Styles */
+.progress {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    width: 0;
+    height: 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    transition: width 0.3s;
+}
+
+/* To-Do List Styles */
+/* To-Do List Styles */
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between; /* Ensure the text is left and the remaining items are right */
+    background: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.todo-item:hover {
+    background-color: #f1f1f1;
+}
+
+.todo-item.completed {
+    text-decoration: line-through;
+    background-color: #e0ffe0;
+}
+
+/* Left side - Task Text */
+.task-left {
+    flex: 2; /* Makes the task text take up more space */
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    text-align: left;
+}
+
+/* Right side - Category, Priority, Due Date, Buttons */
+.task-right {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust space between items */
+}
+
+/* Styling for Category, Priority, Due Date */
+.task-category,
+.task-priority,
+.task-due-date {
+    font-size: 14px;
+    color: #777;
+    padding: 6px 5px;
+}
+
+/* Button and Checkbox styling */
+.editBtn,
+.deleteBtn,
+.completeCheckbox {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.editBtn {
+    color: #4CAF50;
+}
+
+.editBtn:hover {
+    background-color: #e7f9e7;
+}
+
+.deleteBtn {
+    color: #f44336;
+}
+
+.deleteBtn:hover {
+    background-color: #fdecea;
+}
+
+.completeCheckbox {
+    cursor: pointer;
+}
+
+
+/* Limit the width of the task text and handle overflow */
+.task-text {
+    max-width: 60%; /* Adjust based on your layout */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    overflow: hidden; /* Hide the overflowing text */
+    text-overflow: ellipsis; /* Add '...' to indicate truncated text */
+}
+
+/* Optional: Add a tooltip to display full text on hover */
+.task-text:hover {
+    white-space: normal; /* Allow wrapping on hover */
+    background-color: #f4f4f9; /* Optional: highlight the background */
+    padding: 5px; /* Optional: add some padding for readability */
+    border-radius: 5px; /* Optional: round the corners */
+    position: absolute; /* Make the tooltip stand out */
+    z-index: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.todo-item .task-left {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.task-text {
+    max-width: 60%; /* Adjust to your layout */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+}
+
+
+
+@media screen and (max-width: 768px) { 
+    .container {
+        width: 95%;
+    }
+
+    .task-input {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .controls {
+        flex-direction: column; 
+        align-items: center;
+        gap: 15px;
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}

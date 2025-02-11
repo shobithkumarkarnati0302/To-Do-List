@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="todo.svg" type="image/x-icon">
+    <title>To-Do List</title>
+</head>
+<body>
+    <div class="container">
+        <header><h1>Personalized To-Do List   <img src="todo1.svg" alt="todo"></h1></header>
+        <div class="input-text-box">
+            <input type="text" id="inputBox" placeholder="Add a new task..." />
+        </div>
+        <div class="task-input">
+            <div class="controls">
+                <select id="categorySelect">
+                    <option value="Personal">Personal</option>
+                    <option value="Work">Work</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Other">Other</option>
+                </select>
+                <select id="prioritySelect">
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+                <input type="date" id="dueDate" />
+                <button id="addBtn">Add</button>
+            </div>
+        </div>
+
+        <div class="filters">
+            <input type="text" id="searchBox" placeholder="Search tasks..." />
+            <select id="filterOptions">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="pending">Pending</option>
+            </select>
+            <select id="sortOptions">
+                <option value="none">Sort by...</option>
+                <option value="dueDate">Due Date</option>
+                <option value="priority">Priority</option>
+                <option value="category">Category</option>
+            </select>
+            
+        </div>
+
+        <div class="progress">
+            <div id="progressBar" class="progress-bar">0%</div>
+        </div>
+
+        <ul id="todoList" class="todo-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
